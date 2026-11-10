@@ -1,85 +1,156 @@
+:root {
+    --navy: #1f2a44;
+    --coral: #ff7a59;
+    --coral-dark: #e85d3a;
+    --sand: #fdf6ec;
+    --ink: #2b2f3a;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6fa;
-    color: #222;
+    font-family: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    line-height: 1.6;
 }
+
 .page {
-    max-width: 760px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 32px 16px 48px;
+    padding: 40px 20px 60px;
 }
 
 /* Thông tin cá nhân */
 .profile {
-    text-align: center;
-    padding: 28px 16px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 36px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(31, 42, 68, 0.25);
 }
+
 .profile img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;               /* cắt ảnh vuông gọn, không méo */
-    border-radius: 50%;              /* ảnh tròn */
-    border: 4px solid #2a9d9d;
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 5px solid var(--coral);
+    transform: rotate(-3deg);
 }
+
 .profile h1 {
-    margin: 16px 0 4px;
-    font-size: 28px;
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
+
 .profile p {
-    margin: 4px 0;
-    color: #555;
+    margin: 2px 0;
+    color: #cbd2e1;
 }
+
 .social {
-    margin: 16px 0 0;
+    margin: 18px 0 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    gap: 12px;
 }
-.social li {
-    display: inline-block;
-    margin: 0 8px;
-}
+
 .social a {
-    font-size: 26px;
-    color: #2a9d9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    transition: background 0.2s, transform 0.2s;
 }
+
 .social a:hover {
-    color: #1b6f6f;
+    background: var(--coral);
+    transform: translateY(-3px);
+}
+
+/* Tiêu đề từng phần */
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 48px 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+h2::before {
+    content: "";
+    width: 8px;
+    height: 28px;
+    background: var(--coral);
+    border-radius: 4px;
 }
 
 /* Danh sách bài tập */
-h2 {
-    margin: 32px 0 12px;
-    font-size: 22px;
-}
 .lessons {
     margin: 0;
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
+
 .lessons a {
-    display: block;
-    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+    padding: 20px;
     background: #fff;
-    border-radius: 10px;
-    color: #222;
+    color: var(--ink);
+    font-weight: 500;
     text-decoration: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
+
 .lessons a:hover {
-    background: #2a9d9d;
-    color: #fff;
+    transform: translateY(-6px);
+    border-color: var(--coral);
+    box-shadow: 0 10px 22px rgba(255, 122, 89, 0.25);
 }
+
 .lessons i {
-    width: 24px;                      /* các icon thẳng hàng */
-    text-align: center;
-    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+    color: #fff;
+    background: var(--coral);
+    border-radius: 14px;
+    transition: background 0.2s;
+}
+
+.lessons a:hover i {
+    background: var(--coral-dark);
 }
 
 /* Hình chụp hai game */
@@ -88,31 +159,58 @@ h2 {
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+
 .game-gallery figure {
     margin: 0;
-    padding: 8px;
+    padding: 12px;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(31, 42, 68, 0.08);
 }
+
 .game-gallery img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;               /* ảnh nhỏ gọn đều nhau, bấm vào xem ảnh đầy đủ */
-    border-radius: 6px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.2s;
 }
+
+.game-gallery a:hover img {
+    opacity: 0.85;
+}
+
 .game-gallery figcaption {
-    margin-top: 6px;
+    margin-top: 10px;
     font-size: 14px;
-    color: #555;
+    color: var(--muted);
     text-align: center;
 }
 
-@media (max-width: 520px) {
-    .lessons { grid-template-columns: 1fr; }
-    .game-gallery { grid-template-columns: 1fr; }
+/* Màn hình nhỏ */
+@media (max-width: 760px) {
+    .lessons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .lessons,
+    .game-gallery {
+        grid-template-columns: 1fr;
+    }
 }
