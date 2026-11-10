@@ -1,0 +1,75 @@
+/* Khung chứa lớn */
+#root {
+    width: 1024px;
+    margin: 0 auto;                 /* canh giữa trang */
+}
+
+/* Tiêu đề trang */
+#site-header {
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
+    background-color: #ccc;
+    background-image: url("../images/bat-logo.png");
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    background-position: 35% center;
+}
+
+/* Danh sách các nhân vật */
+.superheroes {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    text-align: center;
+}
+.superheroes li {
+    display: inline-block;
+    position: relative;             /* làm mốc để đặt tên và "Read more" */
+    width: 174px;
+}
+.superheroes img {
+    max-width: 100%;                /* ảnh co theo độ rộng của li */
+    border-radius: 15px;
+}
+
+/* Tên nhân vật nằm đè lên đầu ảnh */
+.hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px 15px 0 0;
+}
+
+/* Liên kết "Read more" (mặc định ẩn) */
+.superheroes a {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #666;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Khi rê chuột vào một nhân vật */
+.superheroes li:hover {
+    width: 205px;                   /* phình rộng ra */
+}
+.superheroes li:hover a {
+    display: block;                 /* hiện "Read more" */
+    text-decoration: underline;     /* gạch chân */
+}
+.superheroes li:hover .hero-header {
+    color: #fff;                    /* tên sáng rõ lên */
+}

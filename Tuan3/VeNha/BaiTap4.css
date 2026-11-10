@@ -1,0 +1,12 @@
+ul {
+    margin: 0;
+    padding: 0;               /* bỏ lề trái mặc định 40px */
+    list-style: none;         /* bỏ dấu chấm đầu dòng */
+    font-size: 32px;
+}
+li {
+    display: inline-block;    /* nằm ngang nhưng vẫn đặt được rộng/cao */
+    width: 150px;
+    background-color: aqua;
+    text-align: center;
+}
