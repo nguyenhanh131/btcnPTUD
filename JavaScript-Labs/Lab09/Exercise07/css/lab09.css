@@ -1,0 +1,42 @@
+.form-body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+.form-box {
+    width: 340px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.form-box input {
+    width: 85%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0;
+    background: #2a7fdc;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* dùng cho bài 9.8 */
+#errors {
+    width: 340px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fde2e1;
+    color: #b3261e;
+    border-radius: 6px;
+}
+.hidden  { display: none; }
+.visible { display: block; }

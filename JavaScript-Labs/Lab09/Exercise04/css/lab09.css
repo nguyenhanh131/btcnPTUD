@@ -1,0 +1,27 @@
+#main {
+    width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+#mainImage {
+    width: 100%;
+}
+
+#content {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.makeItGray {
+    filter: grayscale(100%);
+}
+
+.makeItNormal {
+    filter: none;
+    opacity: 1;
+}
+
+.makeItDisappear {
+    opacity: 0;
+}
