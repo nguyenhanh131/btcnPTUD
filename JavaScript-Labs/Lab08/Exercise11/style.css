@@ -1,0 +1,20 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 8px;
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+}
+
+.boxImg {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+}

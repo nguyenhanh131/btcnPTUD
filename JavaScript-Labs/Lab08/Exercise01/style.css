@@ -1,0 +1,19 @@
+body {
+    max-width: 640px;
+    margin: 24px auto;
+    padding: 0 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.status {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.status.off { background: #fde2e1; color: #b3261e; }
+.status.on  { background: #dff5e3; color: #1b7f3b; }
+
+figure { margin: 16px 0; }
+img { max-width: 100%; border: 1px solid #ccc; }
+figcaption { font-size: 14px; color: #666; }

@@ -1,0 +1,16 @@
+body {
+    font-family: "Times New Roman", serif;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px 14px;
+    text-align: center;
+}
+th em {
+    color: red;
+}
