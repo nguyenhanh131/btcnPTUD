@@ -1,5 +1,4 @@
 /* code goes here */
-/* code goes here */
 var first = document.getElementById("first");
 var text = document.createTextNode("this is programmatically created");
 var p = document.createElement("p");

@@ -1,4 +1,3 @@
-/* code goes here */
 var msg = document.getElementById("msgArea");
 msg.value = "here is some text";
 
@@ -36,8 +35,3 @@ ps = document.querySelectorAll("#first p");
 for (i = 0; i < ps.length; i++) {
     document.getElementById("msgArea").value += ps[i].innerHTML + "\n";
 }
-// Bước 13
-document.getElementById("msgArea").setAttribute("class", "hidden");
-
-// Bước 14
-document.getElementById("features").style.backgroundColor = "green";
