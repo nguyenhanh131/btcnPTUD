@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hồng Hạnh – JavaScript Labs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Thông tin cá nhân -->
+        <header class="profile">
+            <img src="images/anhcanhan.jpg" alt="Ảnh Nguyễn Hồng Hạnh">
+            <div class="intro">
+                <h1>Nguyễn Hồng Hạnh</h1>
+                <p><i class="fas fa-id-card"></i> MSSV: 31241028417</p>
+                <p><i class="fas fa-users"></i> Lớp học phần: 26C1INF50902701</p>
+                <p><i class="fas fa-university"></i> Đại học Kinh tế TP.HCM (UEH) · Phát triển ứng dụng TMĐT</p>
+                <ul class="social">
+                    <li><a href="https://github.com/nguyenhanh131" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <!-- Giới thiệu -->
+            <h2>Về bộ bài thực hành</h2>
+            <p class="lead" id="aboutText">
+                Bộ bài thực hành gồm ba Lab, giúp em làm quen với JavaScript từ nền tảng ngôn ngữ (Lab 08),
+    thao tác DOM và xử lý sự kiện (Lab 09), đến sử dụng thư viện jQuery (Lab 10).
+    JavaScript giữ vai trò đưa tính tương tác vào trang web: kiểm tra dữ liệu người dùng nhập,
+    phản hồi các thao tác trên giao diện và cập nhật nội dung mà không cần tải lại trang.
+    Đây đều là những chức năng cần thiết của một website thương mại điện tử.
+            </p>
+
+            <!-- Liên kết Lab -->
+            <h2>Các bài Lab</h2>
+            <ul class="labs">
+                <li>
+                    <a href="Lab08/index.html">
+                        <i class="fas fa-code"></i>
+                        <span class="tag">Lab 08</span>
+                        <strong>JavaScript 1: Language Foundations</strong>
+                        <small>Biến, hàm, mảng, đối tượng, phạm vi biến</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab09/index.html">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span class="tag">Lab 09</span>
+                        <strong>JavaScript 2: DOM and Events</strong>
+                        <small>Chọn phần tử, sự kiện, form, gỡ lỗi</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab10/index.html">
+                        <i class="fas fa-magic"></i>
+                        <span class="tag">Lab 10</span>
+                        <strong>JavaScript 3: jQuery</strong>
+                        <small>Selectors, hiệu ứng, GET request</small>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Kiến thức đã học -->
+            <h2>Kiến thức và kỹ năng đã học</h2>
+            <div class="tabs" role="tablist">
+                <button class="tab active" data-tab="lab08" role="tab">Lab 08</button>
+                <button class="tab" data-tab="lab09" role="tab">Lab 09</button>
+                <button class="tab" data-tab="lab10" role="tab">Lab 10</button>
+            </div>
+
+            <div class="panel active" id="lab08">
+                <ul>
+                    <li>Nhúng JavaScript vào HTML bằng file ngoài và dùng <code>&lt;noscript&gt;</code> khi trình duyệt tắt JS.</li>
+                    <li>Hiểu khác biệt giữa <code>==</code> và <code>===</code>, giữa chuỗi nguyên bản và đối tượng <code>String</code>.</li>
+                    <li>Dùng mảng, vòng lặp và điều kiện để dựng bảng lịch bằng code.</li>
+                    <li>Viết hàm có tham số, hàm trả về giá trị, hàm ẩn danh; phân biệt biến toàn cục và biến cục bộ.</li>
+                    <li>Tạo đối tượng bằng nhiều cách và duyệt thuộc tính bằng <code>for...in</code>; đọc lỗi trong Console.</li>
+                </ul>
+            </div>
+            <div class="panel" id="lab09">
+                <ul>
+                    <li>Chọn phần tử bằng <code>getElementById</code>, <code>querySelector</code>, <code>querySelectorAll</code> rồi đọc/sửa nội dung, thuộc tính, style.</li>
+                    <li>Đi lại trong cây DOM (parent, child, sibling), tạo và xóa phần tử bằng code.</li>
+                    <li>Gắn sự kiện click, mouseover, mouseout, focus, blur, submit; hiểu vì sao cần chờ sự kiện <code>load</code>.</li>
+                    <li>Kiểm tra dữ liệu form và chặn gửi bằng <code>preventDefault()</code>.</li>
+                    <li>Đặt breakpoint, xem Scope và Watch trong DevTools để gỡ lỗi.</li>
+                </ul>
+            </div>
+            <div class="panel" id="lab10">
+                <ul>
+                    <li>Nạp jQuery qua CDN và dùng selector kiểu CSS với <code>$()</code>.</li>
+                    <li>Xử lý sự kiện và thao tác DOM ngắn gọn hơn so với JavaScript thuần.</li>
+                    <li>Tạo hiệu ứng ẩn/hiện, trượt, hoạt ảnh bằng các hàm có sẵn của jQuery.</li>
+                    <li>Gửi GET request và xử lý dữ liệu trả về qua đối tượng jqXHR.</li>
+                </ul>
+            </div>
+
+            <!-- Tự đánh giá -->
+            <h2>Tự đánh giá</h2>
+            <div class="reflection">
+                <p>
+                    Qua ba bài Lab, em nắm được cách JavaScript hoạt động trên trang web: khai báo biến và hàm,
+        phạm vi biến, thao tác DOM, xử lý sự kiện và dùng jQuery để viết mã ngắn gọn hơn.
+        Lab 09 là bài em thấy hữu ích nhưng cũng khó nhất, vì phải hiểu thứ tự trang được nạp.
+        Em từng gặp lỗi script chạy trước khi các phần tử xuất hiện, và chỉ khắc phục được sau khi
+        dùng sự kiện load kết hợp công cụ gỡ lỗi của trình duyệt. Những kiến thức này có thể áp dụng
+        để kiểm tra biểu mẫu đăng ký, cập nhật tổng tiền trong giỏ hàng, lọc sản phẩm hoặc tạo hiệu ứng
+        khi người dùng xem hàng. Em cần cải thiện thêm kỹ năng gỡ lỗi, cách tổ chức mã cho gọn và việc
+        lấy dữ liệu từ máy chủ bằng AJAX.
+            </div>
+        </main>
+
+        <footer>
+            <p>UEH · Phát triển ứng dụng TMĐT · <span id="year"></span></p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
