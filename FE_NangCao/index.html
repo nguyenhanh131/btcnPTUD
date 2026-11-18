@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hồng Hạnh – Frontend nâng cao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Thông tin cá nhân -->
+        <header class="profile">
+            <img src="images/anhcanhan.jpg" alt="Ảnh Nguyễn Hồng Hạnh">
+            <div class="intro">
+                <h1>Nguyễn Hồng Hạnh</h1>
+                <p><i class="fas fa-id-card"></i> MSSV: 31241028417</p>
+                <p><i class="fas fa-users"></i> Lớp học phần: 26C1INF50902701</p>
+                <p><i class="fas fa-university"></i> Đại học Kinh tế TP.HCM (UEH) · Phát triển ứng dụng TMĐT</p>
+                <ul class="social">
+                    <li><a href="https://github.com/nguyenhanh131" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <!-- Nội dung buổi học -->
+            <h2>Nội dung buổi học: Frontend nâng cao</h2>
+            <section class="about">
+                <p>
+                    Trong buổi học này, em thực hành hai nội dung. Thứ nhất là thiết kế giao diện responsive:
+                    dùng media query để bố cục thay đổi theo kích thước màn hình, thẻ <code>&lt;picture&gt;</code>
+                    để chọn ảnh phù hợp với từng độ rộng, và chế độ in để chỉ hiển thị phần cần thiết.
+                    Thứ hai là làm quen với việc trình duyệt thực thi JavaScript bằng cách dùng Console can thiệp vào
+                    game khủng long của Chrome: chặn thua cuộc, đổi tốc độ và độ nhảy. Qua đó em hiểu rõ hơn
+                    mã JavaScript chạy phía người dùng có thể bị đọc và chỉnh sửa như thế nào.
+                </p>
+                <ul class="chips">
+                    <li>Media query</li>
+                    <li>Thẻ &lt;picture&gt;</li>
+                    <li>Chế độ in</li>
+                    <li>Browser Console</li>
+                    <li>Responsive</li>
+                </ul>
+            </section>
+
+            <!-- Liên kết bài tập -->
+            <h2>Bài tập</h2>
+            <div class="tasks">
+                <a class="task" href="dino.html" data-no="01">
+                    <span class="icon"><i class="fas fa-terminal"></i></span>
+                    <span class="tag">Bài 1</span>
+                    <h3>Hack game khủng long</h3>
+                    <p>Dùng Console chặn game over, đổi tốc độ và độ nhảy của khủng long.</p>
+                    <span class="go">Xem bài làm <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="task" href="bai1.html" data-no="02">
+                    <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                    <span class="tag">Bài 2</span>
+                    <h3>Thiết kế responsive</h3>
+                    <p>Media query theo kích thước màn hình, thẻ picture và chế độ in.</p>
+                    <span class="go">Xem bài làm <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p>UEH · Phát triển ứng dụng TMĐT · 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

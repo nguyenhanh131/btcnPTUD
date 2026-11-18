@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 – Hack game khủng long</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back" href="index.html"><i class="fas fa-arrow-left"></i> Về trang chủ</a>
+
+        <header class="hero">
+            <span class="tag">Bài 1</span>
+            <h1>Hack game khủng long</h1>
+            <p>Game khủng long của Chrome (<code>chrome://dino</code>) là một đối tượng JavaScript tên <code>Runner</code>.
+               Khi mở Console, em có thể gọi và ghi đè các phương thức của đối tượng này.</p>
+        </header>
+
+        <main>
+            <!-- Bước 1 -->
+            <section class="step">
+                <h2><span class="step-no">1</span> Chặn game over</h2>
+                <p>Ghi đè hàm <code>gameOver</code> bằng hàm rỗng, nên khi va chạm game vẫn chạy tiếp.</p>
+                <div class="terminal">
+                    <div class="terminal-bar"><span></span><span></span><span></span><em>Console</em></div>
+                    <pre>Runner.instance_.gameOver = function () {};</pre>
+                </div>
+                <div class="shots">
+                    <figure>
+                        <img src="images/dino-1-console.png" alt="Console chặn game over">
+                        <figcaption>Hình 1. Lệnh trong Console để chặn game over.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/dino-2-running.png" alt="Khủng long chạy không thua">
+                        <figcaption>Hình 2. Khủng long va vào chướng ngại vật nhưng game không kết thúc.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Bước 2 -->
+            <section class="step">
+                <h2><span class="step-no">2</span> Đổi tốc độ</h2>
+                <p>Gọi <code>setSpeed()</code> để đặt tốc độ chạy mới cho game.</p>
+                <div class="terminal">
+                    <div class="terminal-bar"><span></span><span></span><span></span><em>Console</em></div>
+                    <pre>Runner.instance_.setSpeed(30);</pre>
+                </div>
+                <div class="shots one">
+                    <figure>
+                        <img src="images/dino-3-speed.png" alt="Đổi tốc độ">
+                        <figcaption>Hình 3. Thay đổi tốc độ chạy của khủng long.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Bước 3 -->
+            <section class="step">
+                <h2><span class="step-no">3</span> Đổi độ nhảy</h2>
+                <p>Gọi <code>setJumpVelocity()</code> của đối tượng khủng long để tăng lực nhảy.</p>
+                <div class="terminal">
+                    <div class="terminal-bar"><span></span><span></span><span></span><em>Console</em></div>
+                    <pre>Runner.instance_.tRex.setJumpVelocity(20);</pre>
+                </div>
+                <div class="shots one">
+                    <figure>
+                        <img src="images/dino-4-jump.png" alt="Đổi độ nhảy">
+                        <figcaption>Hình 4. Thay đổi độ cao cú nhảy của khủng long.</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>UEH · Phát triển ứng dụng TMĐT · 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
