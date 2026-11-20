@@ -1,0 +1,73 @@
+@model _31241028417_NguyenHongHanh.Models.ShippingDetail
+@{
+    ViewData["Title"] = "Thanh toán";
+    var cart = (_31241028417_NguyenHongHanh.Models.HoaDon)ViewBag.Cart;
+}
+
+<h2 class="mb-4">Thanh toán</h2>
+
+<div class="row">
+    <div class="col-lg-7 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="mb-3">Thông tin giao hàng</h5>
+                <form asp-action="Checkout" method="post">
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Mobile" class="control-label"></label>
+                        <input asp-for="Mobile" class="form-control" />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block btn-lg mt-3">Đặt hàng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="mb-3">Đơn hàng của bạn</h5>
+                <ul class="list-unstyled mb-0">
+                    @foreach (var item in cart.ChiTietHoaDons)
+                    {
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>@item.SoLuong x @item.MovieObj.Title</span>
+                            <span>@((item.MovieObj.Price * item.SoLuong).ToString("N0")) đ</span>
+                        </li>
+                    }
+                </ul>
+                <hr />
+                <div class="d-flex justify-content-between font-weight-bold">
+                    <span>Tổng cộng</span>
+                    <span>@cart.TongTien.ToString("N0") đ</span>
+                </div>
+                <a asp-action="Cart" class="btn btn-link px-0 mt-2">← Sửa giỏ hàng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

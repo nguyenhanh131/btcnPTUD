@@ -1,0 +1,59 @@
+@model _31241028417_NguyenHongHanh.Models.HoaDon
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<h2 class="mb-4">Giỏ hàng của bạn</h2>
+
+@if (Model.ChiTietHoaDons.Count == 0)
+{
+    <div class="text-center py-5">
+        <p class="lead">Giỏ hàng đang trống.</p>
+        <a asp-action="Index" class="btn btn-primary">Chọn phim ngay</a>
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table align-middle bg-white">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th class="text-right">Giá</th>
+                    <th class="text-center">SL</th>
+                    <th class="text-right">Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ChiTietHoaDons)
+                {
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="@item.MovieObj.PicturePath" alt="" class="rounded mr-3"
+                                     style="width:60px; height:80px; object-fit:cover;" />
+                                <span>@item.MovieObj.Title</span>
+                            </div>
+                        </td>
+                        <td class="text-right">@item.MovieObj.Price.ToString("N0") đ</td>
+                        <td class="text-center">@item.SoLuong</td>
+                        <td class="text-right">@((item.MovieObj.Price * item.SoLuong).ToString("N0")) đ</td>
+                        <td class="text-right">
+                            <a asp-action="RemoveFromCart" asp-route-maMovies="@item.MaMovie"
+                               class="btn btn-sm btn-outline-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <a asp-action="Index" class="btn btn-outline-secondary mb-2">← Tiếp tục mua sắm</a>
+        <div class="text-right mb-2">
+            <div class="h5 mb-2">Tổng cộng: @Model.TongTien.ToString("N0") đ</div>
+            <a asp-action="Checkout" class="btn btn-success btn-lg">Thanh toán</a>
+        </div>
+    </div>
+}

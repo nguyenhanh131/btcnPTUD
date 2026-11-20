@@ -1,0 +1,76 @@
+﻿@using System.Linq
+@using _31241028417_NguyenHongHanh.Models
+@using _31241028417_NguyenHongHanh.Extension
+@{
+    var cart = Context.Session.Get<HoaDon>("HoaDon");
+    var cartCount = cart.ChiTietHoaDons.Sum(x => x.SoLuong);
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kho Phim Online</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" asp-controller="Movies" asp-action="Index">🎬 Kho Phim Online</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Mở menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Movies" asp-action="Index">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Movies" asp-action="Create">Thêm sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Genres" asp-action="Index">Thể loại</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Movies" asp-action="Cart">
+                            🛒 Giỏ hàng
+                            <span class="badge badge-warning">@cartCount</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container py-4">
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Message"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Đóng">&times;</button>
+        </div>
+    }
+
+    @RenderBody()
+</main>
+
+<footer class="bg-white border-top py-3 mt-5 text-center text-muted small">
+    <div class="container">&copy; @DateTime.Now.Year - 31241028417 - Nguyễn Hồng Hạnh</div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
