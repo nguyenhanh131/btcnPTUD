@@ -1,0 +1,15 @@
+cd /workspaces/btcnPTUD
+cat > .gitignore << 'EOF'
+# Bí mật: cấu hình thật có chuỗi kết nối và App Password
+**/appsettings.json
+
+# Thư mục build và publish
+**/bin/
+**/obj/
+**/publish/
+*.zip
+
+# Máy Mac và VS Code
+.DS_Store
+.vs/
+EOF
