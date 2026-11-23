@@ -1,0 +1,66 @@
+body { background: #faf7f2; color: #3b2a20; }
+.navbar-default { background: #3b2a20; border-color: #2a1d15; }
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand { color: #f3e5d0; }
+.navbar-default .navbar-nav > li > a:hover { color: #fff; }
+.thumbnail { position: relative; border-color: #e5d8c5; }
+.thumbnail .caption h4 a { color: #6f4e37; }
+.add-to-cart { position: absolute; top: 10px; right: 14px; font-size: 26px; }
+.add-to-cart a { color: #6f4e37; }
+.ratings { padding: 0 0 5px; color: #e6a400; }
+.ratings p.pull-right { color: #888; }
+.list-group-item .badge { background: #6f4e37; }
+.thumbnails { margin-top: 10px; }
+.carousel-inner img { width: 100%; }
+.btn-success { background: #6f4e37; border-color: #5a3e2b; }
+.btn-success:hover { background: #5a3e2b; }
+footer { margin: 30px 0; text-align: center; color: #8a7867; }
+
+/* ---- Ảnh thật: giữ tỉ lệ đồng đều dù ảnh bạn tải có kích thước khác nhau ---- */
+.navbar-brand { padding-top: 10px; padding-bottom: 10px; }
+.navbar-brand img { height: 30px; width: auto; }
+.carousel-inner .item img { width: 100%; height: 350px; object-fit: cover; }
+.thumbnail > img,
+.thumbnail .img-responsive,
+.thumbnails img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+@media (max-width: 767px) {
+  .carousel-inner .item img { height: 200px; }
+}
+
+/* ---- Fix lưới sản phẩm: các thẻ cùng hàng cao bằng nhau, không bị float "kẹt" ---- */
+.product-row { display: flex; flex-wrap: wrap; }
+.product-row:before,
+.product-row:after { display: none; }          /* bỏ clearfix của Bootstrap 3 (sẽ thành 1 ô flex thừa) */
+.product-row > [class*="col-"] { display: flex; }
+.product-row .thumbnail { display: flex; flex-direction: column; width: 100%; }
+.product-row .thumbnail .caption { flex: 1; }
+@media (max-width: 767px) {
+  .product-row > [class*="col-"] { display: block; }   /* mobile: mỗi sản phẩm 1 hàng */
+}
+.xzoom-container { display: block; }
+#main_image { width: 100%; height: auto; aspect-ratio: auto; object-fit: fill; }
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img {
+  display: block; max-width: none; max-height: none; transition: none;
+}
+/* ================= Bước 2 + 3: progress kho, nhãn giảm giá / New / Best seller ================= */
+.img-wrap, .pimg-wrap { position: relative; }
+.img-wrap img { display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+
+/* % giảm giá: trên-trái | New / Best seller: trên-phải */
+.tag-discount, .tag-new {
+  position: absolute; top: 8px; z-index: 2;
+  font-size: 13px; padding: .35em .6em;
+  pointer-events: none;            /* để chuột "xuyên" qua nhãn, không chặn hover của xZoom */
+}
+.tag-discount { left: 8px; }
+.tag-new      { right: 8px; }
+
+/* Nút + chuyển xuống góc dưới-phải của ảnh (góc trên-phải dành cho nhãn) */
+.add-to-cart { top: auto; right: 8px; bottom: 8px; }
+.add-to-cart a { display: block; width: 26px; height: 26px; line-height: 26px; border-radius: 50%; background: #fff; overflow: hidden; }
+
+/* Thanh trạng thái kho */
+.progress { height: 16px; margin: 6px 0 8px; font-size: 11px; }
+.progress-bar { line-height: 16px; }
+.rating-container { display: inline-block; vertical-align: middle; }
+.rating-container .filled-stars { color: #e6a400; text-shadow: none; -webkit-text-stroke: 0; }

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HatCoffee – Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/star-rating.min.css">
+    <link rel="stylesheet" href="css/star-rating.min.css">
+<link rel="stylesheet" href="themes/krajee-svg/theme.min.css">
+    <link rel="stylesheet" href="css/xzoom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="ecommerce.html">
+                    <img src="images/logo.png" alt="Logo" height="30">
+                </a>
+                <!-- Ô tìm kiếm chỉ hiện trên mobile -->
+                <form class="visible-xs-inline-block" style="margin-top:10px">
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Tìm sản phẩm"></div>
+                </form>
+            </div>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="ecommerce.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li><a href="ecommerce-status.html">Đơn hàng</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Danh mục <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Cà phê hạt</a></li>
+                            <li><a href="#">Cà phê phin</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Dụng cụ pha chế</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Ô tìm kiếm ẩn trên mobile -->
+                <form class="navbar-form navbar-left hidden-xs">
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Tìm sản phẩm"></div>
+                    <button type="submit" class="btn btn-default">Tìm</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="badge pull-right">4</span><i
+                                class="glyphicon glyphicon-shopping-cart"></i></a></li>
+                    <li><a href="account.html"><i class="glyphicon glyphicon-user"></i></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <h3>Danh mục</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="badge">14</span>Cà phê hạt</li>
+                    <li class="list-group-item"><span class="badge">8</span>Cà phê phin</li>
+                    <li class="list-group-item"><span class="badge">12</span>Dụng cụ pha chế</li>
+                </ul>
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <div class="thumbnail">
+                    <div class="row">
+                        <!-- Hình lớn + hình nhỏ -->
+                        <div class="col-sm-6">
+                            <div class="pimg-wrap">
+                                <span class="label label-danger tag-discount">-15%</span>
+                                <span class="label label-warning tag-new">Best seller</span>
+                                <img class="xzoom img-responsive" id="main_image" src="images/arabica-1.jpg"
+                                    xoriginal="images/arabica-1.jpg" alt="">
+                            </div>
+                            <div class="thumbnails row">
+                                <div class="col-xs-3"><a href="images/arabica-1.jpg"><img
+                                            class="xzoom-gallery img-thumbnail img-responsive"
+                                            src="images/arabica-1.jpg" xpreview="images/arabica-1.jpg" alt=""></a></div>
+                                <div class="col-xs-3"><a href="images/arabica-2.jpg"><img
+                                            class="xzoom-gallery img-thumbnail img-responsive"
+                                            src="images/arabica-2.jpg" xpreview="images/arabica-2.jpg" alt=""></a></div>
+                                <div class="col-xs-3"><a href="images/arabica-3.jpg"><img
+                                            class="xzoom-gallery img-thumbnail img-responsive"
+                                            src="images/arabica-3.jpg" xpreview="images/arabica-3.jpg" alt=""></a></div>
+                                <div class="col-xs-3"><a href="images/arabica-4.jpg"><img
+                                            class="xzoom-gallery img-thumbnail img-responsive"
+                                            src="images/arabica-4.jpg" xpreview="images/arabica-4.jpg" alt=""></a></div>
+                            </div>
+                        </div>
+                        <!-- Mô tả -->
+                        <div class="col-sm-6">
+                            <div class="caption">
+                                <h4 class="pull-right">189.000đ</h4>
+                                <h4><a href="product.html">Cà phê Arabica Cầu Đất</a></h4>
+                                <p>Arabica trồng ở độ cao 1.500m tại Cầu Đất, Đà Lạt. Rang vừa, hương hoa quả và socola,
+                                    hậu vị ngọt dịu. Phù hợp pha pour-over, espresso và cold brew.</p>
+                                <p><strong>Tồn kho:</strong> còn 85% so với lượng nhập</p>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped"
+                                        role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 85%">85%</div>
+                                </div>
+                                <form role="form">
+                                    <div class="number form-group">
+                                        <label>Số lượng</label>
+                                        <input type="number" class="input-sm" id="number" value="1" min="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Độ xay</label>
+                                        <select id="grind">
+                                            <option>Nguyên hạt</option>
+                                            <option>Xay phin</option>
+                                            <option>Xay espresso</option>
+                                            <option>Xay pour-over</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Khối lượng</label>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">250g</button>
+                                            <button type="button" class="btn btn-default">500g</button>
+                                            <button type="button" class="btn btn-default">1kg</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-default">Liên hệ người bán</button>
+                                        <button type="submit" class="btn btn-success">Thêm vào giỏ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Đánh giá -->
+                    <div class="caption" id="comments">
+                        <div class="description">
+                            <p>Hạt được rang theo mẻ nhỏ, đóng gói có van một chiều giữ hương. Nên dùng trong 30 ngày kể
+                                từ ngày rang.</p>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right">3 đánh giá</p>
+                            <p><input class="rating" type="number" value="4" min="0" max="5" step="0.5" data-size="xs"
+                                    data-readonly="true" data-show-caption="false" data-show-clear="false"> 4.0 sao</p>
+                        </div>
+                        <div class="well">
+                            <div class="text-right"><a class="btn btn-success">Viết đánh giá</a></div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="rating" type="number" value="4" min="0" max="5" step="0.5"
+                                        data-size="xs" data-readonly="true" data-show-caption="false"
+                                        data-show-clear="false">
+                                    Nguyễn Minh Anh
+                                    <span class="pull-right">1 ngày trước</span>
+                                    <p>Từ <em>TP. Hồ Chí Minh</em></p>
+                                    <p>Cà phê thơm, vị chua nhẹ rất dễ uống. Mình sẽ mua lại!</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="rating" type="number" value="5" min="0" max="5" step="0.5"
+                                        data-size="xs" data-readonly="true" data-show-caption="false"
+                                        data-show-clear="false">
+                                    Trần Quốc Bảo
+                                    <span class="pull-right">3 ngày trước</span>
+                                    <p>Từ <em>Hà Nội</em></p>
+                                    <p>Đóng gói kỹ, giao nhanh, hạt mới rang.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm khác -->
+                <h4>Sản phẩm khác</h4>
+                <div class="row">
+                    <div class="col-xs-4"><a href="product.html"><img class="img-responsive img-thumbnail"
+                                src="images/p2-robusta.jpg" alt=""></a></div>
+                    <div class="col-xs-4"><a href="product.html"><img class="img-responsive img-thumbnail"
+                                src="images/p3-phin.jpg" alt=""></a></div>
+                    <div class="col-xs-4"><a href="product.html"><img class="img-responsive img-thumbnail"
+                                src="images/p4-v60.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /#content -->
+    <footer>&copy; 2026 HatCoffee – Cà phê hạt & dụng cụ pha chế</footer>
+
+    <!-- Modal đăng nhập -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">Đăng nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group"><label>Email</label><input type="email" class="form-control"></div>
+                        <div class="form-group"><label>Mật khẩu</label><input type="password" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-success">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/star-rating.min.js"></script>
+    <script src="js/star-rating.min.js"></script>
+<script src="themes/krajee-svg/theme.min.js"></script>
+    <script src="js/xzoom.min.js"></script>
+    <script>
+$(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+  $('.xzoom, .xzoom-gallery').xzoom({ tint: '#333', Xoffset: 15 });
+});
+</script>
+</body>
+
+</html>
