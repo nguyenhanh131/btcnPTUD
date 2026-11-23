@@ -1,0 +1,37 @@
+button {outline: none;}
+
+body {height: 100%; width: 100%; margin: 0;}
+
+/* Khung game */
+#container {position: relative; height: 480px; width: 350px; border: 1px solid #ccc; background: url('../sprites/bg.png'); overflow: hidden; margin: 80px auto;}
+
+/* Con chim */
+#bird {position: absolute; background: url('../sprites/bird.png'); height: 42px; width: 65px; background-size: contain; background-repeat: no-repeat; top: 20%; left: 15%; z-index: 3;}
+
+/* Ống khói: dùng ảnh thay cho khối màu xanh */
+.pole {position: absolute; height: 155px; width: 64px; right: -64px;
+       background: url('../sprites/pole.png') no-repeat top center; background-size: 100% auto;}
+
+/* Ống trên: lật ngược ảnh để miệng ống quay xuống dưới */
+#pole_1 {top: 0; transform: scaleY(-1);}
+
+/* Ống dưới */
+#pole_2 {bottom: 0;}
+
+/* Điểm */
+#score {font-size: 100px; position: absolute; width: 100%; text-align: center; padding: 10px; color: #555; z-index: 4; pointer-events: none;}
+
+/* Level: góc trên bên trái */
+#level {position: absolute; top: 8px; left: 10px; z-index: 5; font: bold 22px Arial, sans-serif; color: #fff; text-shadow: 1px 1px 3px #000;}
+
+/* Kỷ lục: góc trên bên phải */
+#best {position: absolute; top: 10px; right: 10px; z-index: 5; font: bold 14px Arial, sans-serif; color: #fff; text-shadow: 1px 1px 3px #000;}
+
+/* Thông báo thắng / thua ở giữa khung */
+#message {position: absolute; top: 40%; width: 100%; text-align: center; z-index: 6; display: none; font: bold 34px Arial, sans-serif; color: #fff; text-shadow: 2px 2px 6px #000;}
+
+/* Nút chơi lại */
+#restart_btn {position: absolute; top: 0; width: 100%; padding: 20px; background-color: #fff; color: #555; font-size: 35px; border: none; cursor: pointer; display: none; border: 1px solid #e5e5e5;}
+
+/* Nút chơi game */
+#play_btn {display: block; position: absolute; width: 100%; height: 100%; background-color: transparent; border: 0; font-size: 30px; color: #555; z-index: 7;}
